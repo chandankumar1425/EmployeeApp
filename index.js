@@ -6,8 +6,9 @@ const { UserRouter } = require("./route/user.route");
 const { EmployeeRouter } = require("./route/employee.router")
 const { auth } = require("./middleware/auth");
 const app = express();
-app.use(express.json());
+
 app.use(cors());
+app.use(express.json());
 
 app.get("/", (req, res) => {
   res.send("Welcome To Employee Application");
